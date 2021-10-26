@@ -15,9 +15,9 @@ export default function App() {
       <Text style={styles.headingTxt}>My Profile</Text>
       <ScrollView style={styles.scrollView}>
         <View style={styles.row}>
-          {IMG_ARRAY.map((_, index) =>
+          {IMG_ARRAY.map((url, index) =>
             <TouchableOpacity key={index} onPress={() => _hangleImageClick(index)}>
-              <Image style={styles.img} source={{ uri: IMG_ARRAY[index] }} />
+              <Image style={styles.img} source={{ uri: url }} />
             </TouchableOpacity>
           )}
         </View>
@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
   img: {
     width: SIZE,
     height: SIZE,
-    padding: 10
   },
+
   row: {
     flexDirection: 'row',
-    flexWrap: 'wrap'
-  }
+    flexWrap : 'wrap'
+  } 
 });
 
 const IMG_ARRAY = [
